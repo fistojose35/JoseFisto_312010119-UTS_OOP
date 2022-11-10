@@ -16,7 +16,7 @@ class Pembuka{
 class Dosen{
     int kedudukan;
     String nama;
-    String NIDN;
+    String NIM;
     int usia;
     String alamat;
     String agama;
@@ -28,8 +28,8 @@ class Dosen{
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Nama: ");
         nama = keyboard.nextLine();
-        System.out.print("NIDN: ");
-        NIDN = keyboard.nextLine();
+        System.out.print("NIM: ");
+        NIM = keyboard.nextLine();
         System.out.print("Alamat: ");
         alamat = keyboard.nextLine();
         System.out.print("Agama: ");
@@ -38,12 +38,12 @@ class Dosen{
         JenisKelamin = keyboard.nextLine();
         System.out.print("Usia: ");
         usia = keyboard.nextInt();
-        System.out.println("Halo " + nama + " Selamat Datang di Perpustakaan Unila");
+        System.out.println("Halo " + nama + " Perpustakaan Online ");
 
     }
     void tampil(){
         System.out.println("\n\nNama: " + nama);
-        System.out.println("NIDN: " + NIDN);
+        System.out.println("NIM: " + NIM);
         System.out.println("Alamat: " + alamat);
         System.out.println("Agama: " + agama);
         System.out.println("Jenis Kelamin: " + JenisKelamin);
@@ -83,12 +83,12 @@ class Mahasiswa{
         JenisKelamin = keyboard.nextLine();
         System.out.print("Usia: ");
         usia = keyboard.nextInt();
-        System.out.println("\nHalo " + nama + " Selamat Datang di Perpustakaan Unila\n\n");
+        System.out.println("\nHalo " + nama + " Perpustakaan Online \n\n");
 
     }
     void tampil(){
         System.out.println("Nama: " + nama);
-        System.out.println("NIDN: " + NIM);
+        System.out.println("NIM: " + NIM);
         System.out.println("Alamat: " + alamat);
         System.out.println("Jurusan: " + jurusan);
         System.out.println("Prodi: " + prodi);
@@ -272,13 +272,13 @@ class penutup{
     }
 }
 
-public class Jose {
+public class Main {
     public static void main(String[] args) {
         Dosen dosen1 = new Dosen();
-        Mahasiswa Jose = new Mahasiswa();
+        Mahasiswa Main = new Mahasiswa();
         pengembalian cetak = new pengembalian();
         Pembuka print = new Pembuka("APLIKASI PEMINJAMAN BUKU PERPUSTAKAAN");
-        penutup salam = new penutup("Trimakasih Telah Berkunjung di Perpustakaan Unila, Sampai Jumpa Kembali");
+        penutup salam = new penutup("Terimakasih atas Kunjungannya!!!");
         Pemilihan pilih = new Pemilihan();
         Scanner keyboard = new Scanner(System.in);
 
@@ -294,7 +294,7 @@ public class Jose {
         switch (kedudukan) {
             case 1:
                 dosen1.method();
-                System.out.print("Masukkan Jumlah Buku yang Ingin di Pinjam: ");
+                System.out.print("Masukkan Jumlah Buku di Pinjam: ");
                 jumlah = keyboard.nextInt();
                 for (int i=1; i<=jumlah; i++) {
                     pilih.method();
@@ -306,14 +306,14 @@ public class Jose {
                 break;
 
             case 2:
-                Jose.method2();
-                System.out.print("Masukkan Jumlah Buku yang Ingin di Pinjam: ");
+                Main.method2();
+                System.out.print("Masukkan Jumlah Buku di Pinjam: ");
                 jumlah = keyboard.nextInt();
                 for (int i=1; i<=jumlah; i++) {
                     pilih.method();
                 }
                 cetak.method();
-                Jose.tampil();
+                Main.tampil();
                 System.out.println("Jumlah Buku yang dipinjam: " + jumlah + " Buku");
                 salam.method();
                 break;
