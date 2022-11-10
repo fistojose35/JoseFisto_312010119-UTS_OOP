@@ -272,10 +272,10 @@ class penutup{
     }
 }
 
-public class Main {
+public class Jose {
     public static void main(String[] args) {
         Dosen dosen1 = new Dosen();
-        Mahasiswa Main = new Mahasiswa();
+        Mahasiswa Jose = new Mahasiswa();
         pengembalian cetak = new pengembalian();
         Pembuka print = new Pembuka("APLIKASI PEMINJAMAN BUKU PERPUSTAKAAN");
         penutup salam = new penutup("Terimakasih atas Kunjungannya!!!");
@@ -306,14 +306,14 @@ public class Main {
                 break;
 
             case 2:
-                Main.method2();
+                Jose.method2();
                 System.out.print("Masukkan Jumlah Buku di Pinjam: ");
                 jumlah = keyboard.nextInt();
                 for (int i=1; i<=jumlah; i++) {
                     pilih.method();
                 }
                 cetak.method();
-                Main.tampil();
+                Jose.tampil();
                 System.out.println("Jumlah Buku yang dipinjam: " + jumlah + " Buku");
                 salam.method();
                 break;
